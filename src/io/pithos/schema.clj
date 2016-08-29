@@ -23,8 +23,7 @@
            (store/converge! blobstore))
          (when exit? (System/exit 0)))
        (catch Exception e
-         (doseq []
           (error e "cannot create schema")
-          (when exit? (System/exit 1))))))
+          (when exit? (System/exit 1)))))
   ([system]
      (converge-schema system true)))
